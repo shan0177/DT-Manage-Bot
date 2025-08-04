@@ -1,3 +1,5 @@
+<div align="center">
+  <img src="https://i.imgur.com/U4130A9.png" alt="Bot Logo Banner" width="800"/>
   <h1>🤖 Telegram Channel Manager & Gatekeeper Bot 🤖</h1>
   <p>
     A powerful, all-in-one Python bot for automating Telegram channel access, managing members, and providing a full suite of admin tools through a secure web dashboard.
@@ -9,21 +11,15 @@
   </p>
 </div>
 
+<p align="center">
+  <em>A demonstration of the user flow and the admin viewing stats on the web dashboard.</em><br>
+  <img src="https://i.imgur.com/g8e1g8O.gif" alt="Bot Demo GIF" width="700"/>
+</p>
 
 ---
 
-### 📚 Table of Contents
-1. [About The Project](#-about-the-project)
-2. [How It Works](#-how-it-works-the-user-journey)
-3. [Key Features](#-key-features)
-4. [The Admin Web Dashboard](#-the-admin-web-dashboard)
-5. [Technology Stack](#-technology-stack)
-6. [Getting Started](#-getting-started)
-7. [Configuration Guide](#️-configuration-env-guide)
-
----
-
-## 🌟 About The Project
+<details>
+  <summary><h3>🌟 About The Project</h3></summary>
 
 Tired of manually approving users, dealing with spammers, and watching your private invite links get shared publicly? This bot is the definitive solution, designed to be a comprehensive gatekeeper and administrative assistant for your Telegram communities.
 
@@ -38,10 +34,11 @@ But it doesn't stop there. For administrators, this bot is a complete control pa
 
 Built with a robust architecture using Python, `python-telegram-bot`, and MongoDB for persistent data backup, this bot is the ultimate tool for serious community managers.
 
----
+</details>
 
-## 👣 How It Works: The User Journey
-
+<details>
+  <summary><h3>👣 How It Works: The User Journey</h3></summary>
+  
 The bot creates a seamless and secure funnel for new users wanting to join your channels.
 
 | Step | Action | Description |
@@ -54,14 +51,15 @@ The bot creates a seamless and secure funnel for new users wanting to join your 
 | **6** | **Gets Invite Link** | The bot verifies the key and finally provides the personal, single-use Telegram invite link. |
 | **7** | **Timer Starts** | The moment the user joins the channel, the bot's internal auto-removal timer starts for them. |
 
----
+</details>
 
-## ✨ Key Features
+<details>
+  <summary><h3>✨ Key Features & Admin Commands</h3></summary>
 
 <table width="100%">
   <tr>
     <td width="50%" valign="top">
-      <h3>👤 For Your Users</h3>
+      <h4>👤 For Your Users</h4>
       <ul>
         <li>✅ **Simple & Interactive:** An easy-to-use <code>/start</code> menu with buttons.</li>
         <li>🔗 **Secure Single-Use Links:** Generates unique, temporary invite links that can't be shared.</li>
@@ -71,7 +69,7 @@ The bot creates a seamless and secure funnel for new users wanting to join your 
       </ul>
     </td>
     <td width="50%" valign="top">
-      <h3>🛠️ For Administrators</h3>
+      <h4>🛠️ For Administrators</h4>
       <ul>
         <li>👑 **Full Control:** A massive set of Telegram commands for every aspect of management.</li>
         <li>💻 **Web Dashboard:** A secure, password-protected web panel for stats and file Browse.</li>
@@ -84,44 +82,50 @@ The bot creates a seamless and secure funnel for new users wanting to join your 
 </table>
 
 <details>
-  <summary><h3>👑 Click to see the Full List of Admin Commands</h3></summary>
+  <summary><h4>👑 Click to see the Full List of Admin Commands</h4></summary>
   
-  #### 👥 Community & Member Management
-  - `/add_channel`: Add a new channel for the bot to manage.
-  - `/remove_channel`: Remove a managed channel.
-  - `/remove`: Kick all non-admin members on a channel's manual list.
-  - `/rem`: Permanently ban a specific user from a channel.
-  - `/add_exception`: Grant a user temporary immunity from auto-removal.
-  - `/list_ids`, `/add_id`, `/del_id`: Manage the manual user lists for a channel.
+  <h5>👥 Community & Member Management</h5>
+  <ul>
+    <li><code>/add_channel</code>: Add a new channel for the bot to manage.</li>
+    <li><code>/remove_channel</code>: Remove a managed channel.</li>
+    <li><code>/remove</code>: Kick all non-admin members on a channel's manual list.</li>
+    <li><code>/rem</code>: Permanently ban a specific user from a channel.</li>
+    <li><code>/add_exception</code>: Grant a user temporary immunity from auto-removal.</li>
+    <li><code>/list_ids</code>, <code>/add_id</code>, <code>/del_id</code>: Manage the manual user lists for a channel.</li>
+  </ul>
   
-  #### 📢 Content & Broadcasting
-  - `/broadcast`: Reply to a message to send it to all users (copy or forward).
-  - `/setschedule`: Schedule a daily message broadcast at a specific time (IST).
-  - `/view_schedules`: View all active scheduled messages.
-  - `/remove_schedule`: Delete a scheduled message.
+  <h5>📢 Content & Broadcasting</h5>
+  <ul>
+    <li><code>/broadcast</code>: Reply to a message to send it to all users (copy or forward).</li>
+    <li><code>/setschedule</code>: Schedule a daily message broadcast at a specific time (IST).</li>
+    <li><code>/view_schedules</code>: View all active scheduled messages.</li>
+    <li><code>/remove_schedule</code>: Delete a scheduled message.</li>
+  </ul>
 
-  #### ⚙️ Bot & Data Control
-  - `/astart`: Get a full, detailed list of all available admin commands.
-  - `/stats`: Get a quick statistical overview directly in Telegram.
-  - `/refresh`: Force the bot to reload all data from local files & MongoDB.
-  - `/pull_json`: Download bot configuration files (`schedules`, `manual_lists`, etc.).
-  - `/add_json`: Upload/replace a configuration file by replying to it.
-  - `/pull_log`: Get the bot's live `bot.log` file.
-  - `/clearlogs`: Clear and restart the bot's local log file.
+  <h5>⚙️ Bot & Data Control</h5>
+  <ul>
+    <li><code>/astart</code>: Get a full, detailed list of all available admin commands.</li>
+    <li><code>/stats</code>: Get a quick statistical overview directly in Telegram.</li>
+    <li><code>/refresh</code>: Force the bot to reload all data from local files & MongoDB.</li>
+    <li><code>/pull_json</code>: Download bot configuration files (<code>schedules</code>, <code>manual_lists</code>, etc.).</li>
+    <li><code>/add_json</code>: Upload/replace a configuration file by replying to it.</li>
+    <li><code>/pull_log</code>: Get the bot's live <code>bot.log</code> file.</li>
+    <li><code>/clearlogs</code>: Clear and restart the bot's local log file.</li>
+  </ul>
 
-  #### 🔗 Invite & Feature Toggles
-  - `/invite`, `/ir`: Create and revoke powerful custom invite links.
-  - `/revokeall`: Instantly revoke all temporary links created by the bot.
-  - `/allow`, `/disable`: Turn the main invite generation feature on or off for users.
-  - `/allowgenall`, `/disablegenall`: Toggle the "Get All Links" feature.
+  <h5>🔗 Invite & Feature Toggles</h5>
+  <ul>
+    <li><code>/invite</code>, <code>/ir</code>: Create and revoke powerful custom invite links.</li>
+    <li><code>/revokeall</code>: Instantly revoke all temporary links created by the bot.</li>
+    <li><code>/allow</code>, <code>/disable</code>: Turn the main invite generation feature on or off for users.</li>
+    <li><code>/allowgenall</code>, <code>/disablegenall</code>: Toggle the "Get All Links" feature.</li>
+  </ul>
 
 </details>
+</details>
 
----
-
----
-
-## 💻 The Admin Web Dashboard
+<details>
+  <summary><h3>💻 The Admin Web Dashboard</h3></summary>
 
 This bot includes a powerful, built-in web dashboard, giving you unparalleled insight and control.
 
@@ -130,29 +134,19 @@ This bot includes a powerful, built-in web dashboard, giving you unparalleled in
 * **Full File Access:** Includes a complete file explorer to browse and view any file in the bot's directory (`.py` code, `.json` data, `.html` templates, etc.) with full syntax highlighting.
 
 <div align="center">
-
-<table>
-  <tr>
-    <td align="center">
-      <p><em>Main Dashboard View (Overall Stats)</em></p>
-      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEheoWbqtU5e3mGk65ysx6HvEbhYlltCxx8Jh4SFU9DAW-IKLCSxWvePzNLVpj04L8OYSV7jHs7vEd4E0d31Tax77119Myu4U83pp5BLkU6hZfbEbeP74AJ-cEuebpM1Ur9TT_nf_Vk6j2eKKXp1cTlCnRQQ7-85goTabZe5OY55yV2nROGqc1l1evD9EMM/s1920/Screenshot%202025-08-04%20225735.png" alt="Admin Dashboard Screenshot 1" width="300"/>
-    </td>
-    <td align="center">
-      <p><em>Main Dashboard View (Channel Stats)</em></p>
-      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgzTUlLjqcytPow8fnghQXmGhfZ_UdxxuQaLZ1Wi3tfYKnvnIJdHvnJmRVQDAx4n2SntKu7jolkatoaRvsrEFUueYbWZd5GEt4w4psXbWtJLbNJjmpyCvJkwbBGtJK5tzvxWgqopv-kqMUy_gqrBFGtsPXCBYOl8h03_BYafasI3how40k3rZBG_3RD0pA/s1920/Screenshot%202025-08-04%20225757.png" alt="Admin Dashboard Screenshot 2" width="300"/>
-    </td>
-    <td align="center">
-      <p><em>Interactive File Explorer</em></p>
-      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh5X4e0_5inzFKP8AWmA2J_0yykEWFP1YojpLG1ewU5ifv3cfTvnAn8FadaNWnweo5Om3ZGz8NExtvfRvBaTJmyRE0XrLTINfeoGcBWq3HsbkF9Ung3sSKuKizKJJiwkwUSpghkBZm7neqMSqhcfDGGis1J6kW19_Da9Y03S6z0WbEFkmbEPRkmrmTTwoI/s1920/Screenshot%202025-08-04%20225819.png" alt="File Explorer Screenshot" width="300"/>
-    </td>
-  </tr>
-</table>
-
+  <p><em>Main Dashboard View</em></p>
+  <img src="https://i.imgur.com/lJ7wYV5.png" alt="Admin Dashboard Screenshot" width="700"/>
+  <br><br>
+  <p><em>Interactive File Explorer</em></p>
+  <img src="https://i.imgur.com/yD8vP3Q.png" alt="File Explorer Screenshot" width="700"/>
 </div>
 
----
+</details>
 
-## 🛠️ Technology Stack
+
+<details>
+  <summary><h3>🛠️ Technology Stack</h3></summary>
+
 This bot is built with a modern, asynchronous stack for high performance.
 
 * **[Python 3.10+](https://www.python.org/)**: The core programming language.
@@ -162,11 +156,10 @@ This bot is built with a modern, asynchronous stack for high performance.
 * **[Motor](https://motor.readthedocs.io/)**: The official asynchronous driver for using MongoDB with `asyncio`.
 * **[AIOFiles](https://github.com/Tinche/aiofiles)**: Used for asynchronous reading and writing of local JSON files.
 
----
+</details>
 
-## 🚀 Getting Started
-
-Follow these steps to get your bot up and running.
+<details>
+  <summary><h3>🚀 Getting Started & Configuration</h3></summary>
 
 ### Prerequisites
 * You must have Python 3.10 or newer installed.
@@ -196,11 +189,10 @@ Follow these steps to get your bot up and running.
     ```bash
     python main.py
     ```
-
----
+<br>
 
 <details>
-  <summary><h3>⚙️ Click to see the Full `.env` Configuration Guide</h3></summary>
+  <summary><h4>⚙️ Click to see the Full `.env` Configuration Guide</h4></summary>
   
   | Variable                        | Description                                                                                             | Required? | Default Value |
   | ------------------------------- | ------------------------------------------------------------------------------------------------------- | :-------: | :-----------: |
@@ -222,4 +214,5 @@ Follow these steps to get your bot up and running.
   | `USER_COOLDOWN_SECONDS`         | (Optional) Cooldown time for non-admin users to prevent spam.                                             |    ❌     |      `5`      |
   | `REMOVAL_DELAY`                 | (Optional) Delay in seconds between kick actions to avoid API limits.                                     |    ❌     |     `1.0`     |
   | `MAX_RETRIES`                   | (Optional) Max number of retries for failed Telegram API calls.                                           |    ❌     |      `3`      |
+</details>
 </details>
