@@ -1,6 +1,35 @@
+<style>
+  /* Custom CSS for Glowing Text and Enhanced UI */
+  .glow {
+    color: #fff;
+    text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #fff,
+      0 0 42px #0fa,
+      0 0 82px #0fa,
+      0 0 92px #0fa,
+      0 0 102px #0fa,
+      0 0 151px #0fa;
+  }
+  details > summary {
+    font-size: 1.2em; /* Bigger font size for dropdowns */
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px;
+    background-color: rgba(44, 83, 100, 0.3);
+    border-radius: 5px;
+    margin: 10px 0;
+    transition: background-color 0.3s ease;
+  }
+  details > summary:hover {
+    background-color: rgba(44, 83, 100, 0.6);
+  }
+</style>
+
 <div align="center">
   <img src="https://i.imgur.com/U4130A9.png" alt="Bot Logo Banner" width="800"/>
-  <h1>🤖 Telegram Channel Manager & Gatekeeper Bot 🤖</h1>
+  <h1 class="glow">🤖 Telegram Channel Manager & Gatekeeper Bot 🤖</h1>
   <p>
     A powerful, all-in-one Python bot for automating Telegram channel access, managing members, and providing a full suite of admin tools through a secure web dashboard.
   </p>
@@ -11,14 +40,20 @@
   </p>
 </div>
 
-<p align="center">
-  <em>A demonstration of a user getting an invite and the admin viewing stats on the web dashboard.</em><br>
-  <img src="https://i.imgur.com/g8e1g8O.gif" alt="Bot Demo GIF" width="700"/>
-</p>
+---
+
+### 📚 Table of Contents
+1. [About The Project](#-about-the-project)
+2. [How It Works](#-how-it-works-the-user-journey)
+3. [Key Features](#-key-features)
+4. [The Admin Web Dashboard](#-the-admin-web-dashboard)
+5. [Technology Stack](#-technology-stack)
+6. [Getting Started](#-getting-started)
+7. [Configuration Guide](#️-configuration-env-guide)
 
 ---
 
-## 🌟 About The Project
+## <h2 class="glow">🌟 About The Project</h2>
 
 Tired of manually approving users, dealing with spammers, and watching your private invite links get shared publicly? This bot is the definitive solution, designed to be a comprehensive gatekeeper and administrative assistant for your Telegram communities.
 
@@ -35,7 +70,28 @@ Built with a robust architecture using Python, `python-telegram-bot`, and MongoD
 
 ---
 
-## ✨ Key Features
+## <h2 class="glow">👣 How It Works: The User Journey</h2>
+
+The bot creates a seamless and secure funnel for new users wanting to join your channels.
+
+| Step | Action | Description |
+| :--: | --- | --- |
+| **1** | **User Starts Bot** | The user finds your bot and sends the `/start` command. |
+| **2** | **Channel Selection** | The bot replies with an interactive menu of all your managed channels. |
+| **3** | **Receives Shortlink** | Upon selecting a channel, the user is given a unique, protected shortlink. |
+| **4** | **Verification** | The user must open the link and complete the required task (e.g., view an ad, solve a captcha). |
+| **5** | **Redeems Key** | After verification, they receive a long, random key which they paste back into the bot chat. |
+| **6** | **Gets Invite Link** | The bot verifies the key and finally provides the personal, single-use Telegram invite link. |
+| **7** | **Timer Starts** | The moment the user joins the channel, the bot's internal auto-removal timer starts for them. |
+
+<p align="center">
+  <em>A demonstration of the user flow and the admin dashboard.</em><br>
+  <img src="https://i.imgur.com/g8e1g8O.gif" alt="Bot Demo GIF" width="700"/>
+</p>
+
+---
+
+## <h2 class="glow">✨ Key Features</h2>
 
 <table width="100%">
   <tr>
@@ -63,7 +119,7 @@ Built with a robust architecture using Python, `python-telegram-bot`, and MongoD
 </table>
 
 <details>
-  <summary><strong>👑 Click to see the Full List of Admin Commands</strong></summary>
+  <summary>👑 Click to see the Full List of Admin Commands</summary>
   
   #### 👥 Community & Member Management
   - `/add_channel`: Add a new channel for the bot to manage.
@@ -98,7 +154,7 @@ Built with a robust architecture using Python, `python-telegram-bot`, and MongoD
 
 ---
 
-## 💻 The Admin Web Dashboard
+## <h2 class="glow">💻 The Admin Web Dashboard</h2>
 
 This bot includes a powerful, built-in web dashboard, giving you unparalleled insight and control.
 
@@ -116,33 +172,46 @@ This bot includes a powerful, built-in web dashboard, giving you unparalleled in
 
 ---
 
-## 🚀 Getting Started
+## <h2 class="glow">🛠️ Technology Stack</h2>
+This bot is built with a modern, asynchronous stack for high performance.
+
+* **[Python 3.10+](https://www.python.org/)**: The core programming language.
+* **[python-telegram-bot](https://python-telegram-bot.org/)**: One of the most powerful and popular libraries for interacting with the Telegram Bot API.
+* **[Quart](https://pgjones.gitlab.io/quart/)**: An asynchronous web framework with a Flask-like API, used to serve the admin dashboard.
+* **[MongoDB](https://www.mongodb.com/)**: A NoSQL database used as a persistent, cloud-based backup for all configuration files.
+* **[Motor](https://motor.readthedocs.io/)**: The official asynchronous driver for using MongoDB with `asyncio`.
+* **[AIOFiles](https://github.com/Tinche/aiofiles)**: Used for asynchronous reading and writing of local JSON files.
+
+---
+
+## <h2 class="glow">🚀 Getting Started</h2>
 
 Follow these steps to get your bot up and running.
 
-### 1. Prerequisites
-* Python 3.10 or higher
-* A Telegram Bot Token from [@BotFather](https://t.me/BotFather)
-* A free MongoDB Atlas account for database hosting
+### Prerequisites
+* You must have Python 3.10 or newer installed.
+* You will need a Telegram Bot Token from [@BotFather](https://t.me/BotFather).
+* You will need a free MongoDB Atlas account for the database backup feature.
 
-### 2. Installation
-1.  **Clone the Repository:**
+### Installation
+1.  **Get the Code:**
+    Clone this project to your local machine or server.
     ```bash
     git clone <repository_url>
     cd <repository_directory>
     ```
 
-2.  **Install Dependencies:**
-    This will install all the required Python libraries.
+2.  **Install the Requirements:**
+    This will install all the Python libraries the bot needs to run.
     ```bash
     pip install -r requirements.txt
     ```
 
 3.  **Configure Your Bot:**
-    * Create a file named `.env` in the project's root directory.
-    * Copy the variables from the configuration table below and fill in your own values.
+    * Create a new file named `.env` in the main folder.
+    * Copy the variables from the configuration guide below and fill in your own secret keys and settings.
 
-4.  **Run the Bot:**
+4.  **Launch the Bot:**
     You're all set! Start the bot with this command.
     ```bash
     python main.py
@@ -151,18 +220,20 @@ Follow these steps to get your bot up and running.
 ---
 
 <details>
-  <summary><strong>⚙️ Click to see the Full `.env` Configuration Guide</strong></summary>
+  <summary>⚙️ Click to see the Full `.env` Configuration Guide</summary>
   
   | Variable                        | Description                                                                                             | Required? | Default Value |
   | ------------------------------- | ------------------------------------------------------------------------------------------------------- | :-------: | :-----------: |
-  | `BOT_TOKEN`                     | The API token for your bot from Telegram's @BotFather.                                                    |    ✅     |      N/A      |
-  | `BOT_USERNAME`                  | Your bot's username without the '@'.                                                                      |    ✅     |      N/A      |
-  | `ADMIN_CHAT_ID`                 | Your numeric Telegram ID. For multiple admins, separate with a comma.                                     |    ✅     |      N/A      |
-  | `MONGO_URI`                     | The full connection string for your MongoDB Atlas cluster.                                                |    ✅     |      N/A      |
-  | `MONGO_DB_NAME`                 | The name of the database to use within your MongoDB cluster.                                              |    ✅     |      N/A      |
-  | `WEB_ADMIN_PASSWORD`            | The password you will use to log in to the web admin dashboard.                                           |    ✅     |      N/A      |
-  | `SECRET_KEY`                    | A long, random string used to secure web sessions.                                                        |    ✅     |      N/A      |
-  | `LOGS_CHANNEL`                  | The numeric ID of the private channel where the bot sends general logs, reports, and errors.              |    ✅     |      N/A      |
+  | `API_ID`                        | (Optional) Your personal Telegram API ID from my.telegram.org.                                          |    ❌     |     None      |
+  | `API_HASH`                      | (Optional) Your personal Telegram API Hash from my.telegram.org.                                        |    ❌     |     None      |
+  | `BOT_TOKEN`                     | **(Required)** The API token for your bot from Telegram's @BotFather.                                     |    ✅     |      N/A      |
+  | `BOT_USERNAME`                  | **(Required)** Your bot's username without the '@'.                                                       |    ✅     |      N/A      |
+  | `ADMIN_CHAT_ID`                 | **(Required)** Your numeric Telegram ID. For multiple admins, separate with a comma.                      |    ✅     |      N/A      |
+  | `MONGO_URI`                     | **(Required)** The full connection string for your MongoDB Atlas cluster.                                 |    ✅     |      N/A      |
+  | `MONGO_DB_NAME`                 | **(Required)** The name of the database to use within your MongoDB cluster.                               |    ✅     |      N/A      |
+  | `WEB_ADMIN_PASSWORD`            | **(Required)** The password you will use to log in to the web admin dashboard.                            |    ✅     |      N/A      |
+  | `SECRET_KEY`                    | **(Required)** A long, random string used to secure web sessions.                                         |    ✅     |      N/A      |
+  | `LOGS_CHANNEL`                  | **(Required)** The numeric ID of the private channel where the bot sends general logs, reports, and errors.              |    ✅     |      N/A      |
   | `DATABASE_CHANNEL_ID`           | (Optional) ID of a channel for more detailed logs (joins, kicks, etc.).                                   |    ❌     |     None      |
   | `URL`                           | (Optional) The public URL of your bot, used for keep-alive pings on platforms like Koyeb.                 |    ❌     |     None      |
   | `PORT`                          | (Optional) The port for the web server.                                                                   |    ❌     |     `8000`    |
@@ -172,9 +243,3 @@ Follow these steps to get your bot up and running.
   | `REMOVAL_DELAY`                 | (Optional) Delay in seconds between kick actions to avoid API limits.                                     |    ❌     |     `1.0`     |
   | `MAX_RETRIES`                   | (Optional) Max number of retries for failed Telegram API calls.                                           |    ❌     |      `3`      |
 </details>
-
----
-
-### 📜 License
-
-This project is distributed under the MIT License. See `LICENSE` for more information.
