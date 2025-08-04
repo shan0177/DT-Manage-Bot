@@ -1,4 +1,4 @@
-<div align="center">
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/8a5b3e25-3eeb-44bc-ae0a-5a0745952a9b" /><div align="center">
   <img src="https://i.imgur.com/U4130A9.png" alt="Bot Logo Banner" width="800"/>
   <h1>🤖 Telegram Channel Manager & Gatekeeper Bot 🤖</h1>
   <p>
@@ -134,11 +134,14 @@ This bot includes a powerful, built-in web dashboard, giving you unparalleled in
 * **Full File Access:** Includes a complete file explorer to browse and view any file in the bot's directory (`.py` code, `.json` data, `.html` templates, etc.) with full syntax highlighting.
 
 <div align="center">
+  <p><em>Main Dashboard View </em></p>
+  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEheoWbqtU5e3mGk65ysx6HvEbhYlltCxx8Jh4SFU9DAW-IKLCSxWvePzNLVpj04L8OYSV7jHs7vEd4E0d31Tax77119Myu4U83pp5BLkU6hZfbEbeP74AJ-cEuebpM1Ur9TT_nf_Vk6j2eKKXp1cTlCnRQQ7-85goTabZe5OY55yV2nROGqc1l1evD9EMM/s1920/Screenshot%202025-08-04%20225735.png" alt="Admin Dashboard Screenshot" width="700"/>
+  <br><br>
   <p><em>Main Dashboard View</em></p>
-  <img src="https://i.imgur.com/lJ7wYV5.png" alt="Admin Dashboard Screenshot" width="700"/>
+  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgzTUlLjqcytPow8fnghQXmGhfZ_UdxxuQaLZ1Wi3tfYKnvnIJdHvnJmRVQDAx4n2SntKu7jolkatoaRvsrEFUueYbWZd5GEt4w4psXbWtJLbNJjmpyCvJkwbBGtJK5tzvxWgqopv-kqMUy_gqrBFGtsPXCBYOl8h03_BYafasI3how40k3rZBG_3RD0pA/s1920/Screenshot%202025-08-04%20225757.png" alt="Admin Dashboard Screenshot" width="700"/>
   <br><br>
   <p><em>Interactive File Explorer</em></p>
-  <img src="https://i.imgur.com/yD8vP3Q.png" alt="File Explorer Screenshot" width="700"/>
+  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh5X4e0_5inzFKP8AWmA2J_0yykEWFP1YojpLG1ewU5ifv3cfTvnAn8FadaNWnweo5Om3ZGz8NExtvfRvBaTJmyRE0XrLTINfeoGcBWq3HsbkF9Ung3sSKuKizKJJiwkwUSpghkBZm7neqMSqhcfDGGis1J6kW19_Da9Y03S6z0WbEFkmbEPRkmrmTTwoI/s1920/Screenshot%202025-08-04%20225819.png" alt="File Explorer Screenshot" width="700"/>
 </div>
 
 ---
