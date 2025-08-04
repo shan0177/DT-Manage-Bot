@@ -1,5 +1,3 @@
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/8a5b3e25-3eeb-44bc-ae0a-5a0745952a9b" /><div align="center">
-  <img src="https://i.imgur.com/U4130A9.png" alt="Bot Logo Banner" width="800"/>
   <h1>🤖 Telegram Channel Manager & Gatekeeper Bot 🤖</h1>
   <p>
     A powerful, all-in-one Python bot for automating Telegram channel access, managing members, and providing a full suite of admin tools through a secure web dashboard.
