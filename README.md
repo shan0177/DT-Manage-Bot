@@ -1,35 +1,6 @@
-<style>
-  /* Custom CSS for Glowing Text and Enhanced UI */
-  .glow {
-    color: #fff;
-    text-shadow:
-      0 0 7px #fff,
-      0 0 10px #fff,
-      0 0 21px #fff,
-      0 0 42px #0fa,
-      0 0 82px #0fa,
-      0 0 92px #0fa,
-      0 0 102px #0fa,
-      0 0 151px #0fa;
-  }
-  details > summary {
-    font-size: 1.2em; /* Bigger font size for dropdowns */
-    font-weight: bold;
-    cursor: pointer;
-    padding: 10px;
-    background-color: rgba(44, 83, 100, 0.3);
-    border-radius: 5px;
-    margin: 10px 0;
-    transition: background-color 0.3s ease;
-  }
-  details > summary:hover {
-    background-color: rgba(44, 83, 100, 0.6);
-  }
-</style>
-
 <div align="center">
   <img src="https://i.imgur.com/U4130A9.png" alt="Bot Logo Banner" width="800"/>
-  <h1 class="glow">🤖 Telegram Channel Manager & Gatekeeper Bot 🤖</h1>
+  <h1>🤖 Telegram Channel Manager & Gatekeeper Bot 🤖</h1>
   <p>
     A powerful, all-in-one Python bot for automating Telegram channel access, managing members, and providing a full suite of admin tools through a secure web dashboard.
   </p>
@@ -39,6 +10,11 @@
     <img alt="License" src="https://img.shields.io/badge/license-MIT-green.svg?style=for-the-badge">
   </p>
 </div>
+
+<p align="center">
+  <em>A demonstration of a user getting an invite and the admin viewing stats on the web dashboard.</em><br>
+  <img src="https://i.imgur.com/g8e1g8O.gif" alt="Bot Demo GIF" width="700"/>
+</p>
 
 ---
 
@@ -53,7 +29,7 @@
 
 ---
 
-## <h2 class="glow">🌟 About The Project</h2>
+## 🌟 About The Project
 
 Tired of manually approving users, dealing with spammers, and watching your private invite links get shared publicly? This bot is the definitive solution, designed to be a comprehensive gatekeeper and administrative assistant for your Telegram communities.
 
@@ -70,7 +46,7 @@ Built with a robust architecture using Python, `python-telegram-bot`, and MongoD
 
 ---
 
-## <h2 class="glow">👣 How It Works: The User Journey</h2>
+## 👣 How It Works: The User Journey
 
 The bot creates a seamless and secure funnel for new users wanting to join your channels.
 
@@ -84,14 +60,9 @@ The bot creates a seamless and secure funnel for new users wanting to join your 
 | **6** | **Gets Invite Link** | The bot verifies the key and finally provides the personal, single-use Telegram invite link. |
 | **7** | **Timer Starts** | The moment the user joins the channel, the bot's internal auto-removal timer starts for them. |
 
-<p align="center">
-  <em>A demonstration of the user flow and the admin dashboard.</em><br>
-  <img src="https://i.imgur.com/g8e1g8O.gif" alt="Bot Demo GIF" width="700"/>
-</p>
-
 ---
 
-## <h2 class="glow">✨ Key Features</h2>
+## ✨ Key Features
 
 <table width="100%">
   <tr>
@@ -119,7 +90,7 @@ The bot creates a seamless and secure funnel for new users wanting to join your 
 </table>
 
 <details>
-  <summary>👑 Click to see the Full List of Admin Commands</summary>
+  <summary><h3>👑 Click to see the Full List of Admin Commands</h3></summary>
   
   #### 👥 Community & Member Management
   - `/add_channel`: Add a new channel for the bot to manage.
@@ -154,7 +125,7 @@ The bot creates a seamless and secure funnel for new users wanting to join your 
 
 ---
 
-## <h2 class="glow">💻 The Admin Web Dashboard</h2>
+## 💻 The Admin Web Dashboard
 
 This bot includes a powerful, built-in web dashboard, giving you unparalleled insight and control.
 
@@ -172,7 +143,7 @@ This bot includes a powerful, built-in web dashboard, giving you unparalleled in
 
 ---
 
-## <h2 class="glow">🛠️ Technology Stack</h2>
+## 🛠️ Technology Stack
 This bot is built with a modern, asynchronous stack for high performance.
 
 * **[Python 3.10+](https://www.python.org/)**: The core programming language.
@@ -184,7 +155,7 @@ This bot is built with a modern, asynchronous stack for high performance.
 
 ---
 
-## <h2 class="glow">🚀 Getting Started</h2>
+## 🚀 Getting Started
 
 Follow these steps to get your bot up and running.
 
@@ -220,7 +191,7 @@ Follow these steps to get your bot up and running.
 ---
 
 <details>
-  <summary>⚙️ Click to see the Full `.env` Configuration Guide</summary>
+  <summary><h3>⚙️ Click to see the Full `.env` Configuration Guide</h3></summary>
   
   | Variable                        | Description                                                                                             | Required? | Default Value |
   | ------------------------------- | ------------------------------------------------------------------------------------------------------- | :-------: | :-----------: |
