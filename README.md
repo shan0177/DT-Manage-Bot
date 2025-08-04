@@ -1,20 +1,25 @@
 <div align="center">
-  <img src="https://i.imgur.com/U4130A9.png" alt="Bot Logo Banner" width="800"/>
   <h1>🤖 Telegram Channel Manager & Gatekeeper Bot 🤖</h1>
   <p>
     A powerful, all-in-one Python bot for automating Telegram channel access, managing members, and providing a full suite of admin tools through a secure web dashboard.
   </p>
-  
+
   <p>
     <img alt="Python Version" src="https://img.shields.io/badge/python-3.11+-blue.svg?style=for-the-badge&logo=python&logoColor=white">
     <img alt="License" src="https://img.shields.io/badge/license-MIT-green.svg?style=for-the-badge">
   </p>
 </div>
 
-<p align="center">
-  <em>A demonstration of the user flow and the admin viewing stats on the web dashboard.</em><br>
-  <img src="https://i.imgur.com/g8e1g8O.gif" alt="Bot Demo GIF" width="700"/>
-</p>
+---
+
+### 📚 Table of Contents
+1. [About The Project](#-about-the-project)
+2. [How It Works](#-how-it-works-the-user-journey)
+3. [Key Features](#-key-features)
+4. [The Admin Web Dashboard](#-the-admin-web-dashboard)
+5. [Technology Stack](#-technology-stack)
+6. [Getting Started](#-getting-started)
+7. [Configuration Guide](#️-configuration-env-guide)
 
 ---
 
@@ -38,7 +43,7 @@ Built with a robust architecture using Python, `python-telegram-bot`, and MongoD
 
 <details>
   <summary><h3>👣 How It Works: The User Journey</h3></summary>
-  
+
 The bot creates a seamless and secure funnel for new users wanting to join your channels.
 
 | Step | Action | Description |
@@ -83,7 +88,7 @@ The bot creates a seamless and secure funnel for new users wanting to join your 
 
 <details>
   <summary><h4>👑 Click to see the Full List of Admin Commands</h4></summary>
-  
+
   <h5>👥 Community & Member Management</h5>
   <ul>
     <li><code>/add_channel</code>: Add a new channel for the bot to manage.</li>
@@ -93,7 +98,7 @@ The bot creates a seamless and secure funnel for new users wanting to join your 
     <li><code>/add_exception</code>: Grant a user temporary immunity from auto-removal.</li>
     <li><code>/list_ids</code>, <code>/add_id</code>, <code>/del_id</code>: Manage the manual user lists for a channel.</li>
   </ul>
-  
+
   <h5>📢 Content & Broadcasting</h5>
   <ul>
     <li><code>/broadcast</code>: Reply to a message to send it to all users (copy or forward).</li>
@@ -134,27 +139,39 @@ This bot includes a powerful, built-in web dashboard, giving you unparalleled in
 * **Full File Access:** Includes a complete file explorer to browse and view any file in the bot's directory (`.py` code, `.json` data, `.html` templates, etc.) with full syntax highlighting.
 
 <div align="center">
-  <p><em>Main Dashboard View</em></p>
-  <img src="https://i.imgur.com/lJ7wYV5.png" alt="Admin Dashboard Screenshot" width="700"/>
-  <br><br>
-  <p><em>Interactive File Explorer</em></p>
-  <img src="https://i.imgur.com/yD8vP3Q.png" alt="File Explorer Screenshot" width="700"/>
+
+<table>
+  <tr>
+    <td align="center">
+      <p><em>Main Dashboard View (Overall Stats)</em></p>
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEheoWbqtU5e3mGk65ysx6HvEbhYlltCxx8Jh4SFU9DAW-IKLCSxWvePzNLVpj04L8OYSV7jHs7vEd4E0d31Tax77119Myu4U83pp5BLkU6hZfbEbeP74AJ-cEuebpM1Ur9TT_nf_Vk6j2eKKXp1cTlCnRQQ7-85goTabZe5OY55yV2nROGqc1l1evD9EMM/s1920/Screenshot%202025-08-04%20225735.png" alt="Admin Dashboard Screenshot 1" width="300"/>
+    </td>
+    <td align="center">
+      <p><em>Main Dashboard View (Channel Stats)</em></p>
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgzTUlLjqcytPow8fnghQXmGhfZ_UdxxuQaLZ1Wi3tfYKnvnIJdHvnJmRVQDAx4n2SntKu7jolkatoaRvsrEFUueYbWZd5GEt4w4psXbWtJLbNJjmpyCvJkwbBGtJK5tzvxWgqopv-kqMUy_gqrBFGtsPXCBYOl8h03_BYafasI3how40k3rZBG_3RD0pA/s1920/Screenshot%202025-08-04%20225757.png" alt="Admin Dashboard Screenshot 2" width="300"/>
+    </td>
+    <td align="center">
+      <p><em>Interactive File Explorer</em></p>
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh5X4e0_5inzFKP8AWmA2J_0yykEWFP1YojpLG1ewU5ifv3cfTvnAn8FadaNWnweo5Om3ZGz8NExtvfRvBaTJmyRE0XrLTINfeoGcBWq3HsbkF9Ung3sSKuKizKJJiwkwUSpghkBZm7neqMSqhcfDGGis1J6kW19_Da9Y03S6z0WbEFkmbEPRkmrmTTwoI/s1920/Screenshot%202025-08-04%20225819.png" alt="File Explorer Screenshot" width="300"/>
+    </td>
+  </tr>
+</table>
+
 </div>
 
 </details>
-
 
 <details>
   <summary><h3>🛠️ Technology Stack</h3></summary>
 
 This bot is built with a modern, asynchronous stack for high performance.
 
-* **[Python 3.10+](https://www.python.org/)**: The core programming language.
-* **[python-telegram-bot](https://python-telegram-bot.org/)**: One of the most powerful and popular libraries for interacting with the Telegram Bot API.
-* **[Quart](https://pgjones.gitlab.io/quart/)**: An asynchronous web framework with a Flask-like API, used to serve the admin dashboard.
-* **[MongoDB](https://www.mongodb.com/)**: A NoSQL database used as a persistent, cloud-based backup for all configuration files.
-* **[Motor](https://motor.readthedocs.io/)**: The official asynchronous driver for using MongoDB with `asyncio`.
-* **[AIOFiles](https://github.com/Tinche/aiofiles)**: Used for asynchronous reading and writing of local JSON files.
+* **Python 3.10+**: The core programming language.
+* **python-telegram-bot**: One of the most powerful and popular libraries for interacting with the Telegram Bot API.
+* **Quart**: An asynchronous web framework with a Flask-like API, used to serve the admin dashboard.
+* **MongoDB**: A NoSQL database used as a persistent, cloud-based backup for all configuration files.
+* **Motor**: The official asynchronous driver for using MongoDB with `asyncio`.
+* **AIOFiles**: Used for asynchronous reading and writing of local JSON files.
 
 </details>
 
@@ -169,16 +186,16 @@ This bot is built with a modern, asynchronous stack for high performance.
 ### Installation
 1.  **Get the Code:**
     Clone this project to your local machine or server.
-    ```bash
+    ````bash
     git clone <repository_url>
     cd <repository_directory>
-    ```
+    ````
 
 2.  **Install the Requirements:**
     This will install all the Python libraries the bot needs to run.
-    ```bash
+    ````bash
     pip install -r requirements.txt
-    ```
+    ````
 
 3.  **Configure Your Bot:**
     * Create a new file named `.env` in the main folder.
@@ -186,14 +203,14 @@ This bot is built with a modern, asynchronous stack for high performance.
 
 4.  **Launch the Bot:**
     You're all set! Start the bot with this command.
-    ```bash
+    ````bash
     python main.py
-    ```
+    ````
 <br>
 
 <details>
   <summary><h4>⚙️ Click to see the Full `.env` Configuration Guide</h4></summary>
-  
+
   | Variable                        | Description                                                                                             | Required? | Default Value |
   | ------------------------------- | ------------------------------------------------------------------------------------------------------- | :-------: | :-----------: |
   | `API_ID`                        | (Optional) Your personal Telegram API ID from my.telegram.org.                                          |    ❌     |     None      |
