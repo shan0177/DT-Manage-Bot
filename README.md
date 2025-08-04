@@ -9,10 +9,6 @@
   </p>
 </div>
 
-<p align="center">
-  <em>A demonstration of a user getting an invite and the admin viewing stats on the web dashboard.</em><br>
-  <img src="https://i.imgur.com/g8e1g8O.gif" alt="Bot Demo GIF" width="700"/>
-</p>
 
 ---
 
